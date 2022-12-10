@@ -17,14 +17,13 @@
 “Make it work, make it right, make it fast.” – Kent Beck
 */
 
+const btn = document.querySelector('.btn');
 const all_quotes = [
     {
-        "author" : "Martin Fowler",
-        "quote" : "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+        "Martin Fowler" : "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
     },
     {
-        "author" : "John Johnson",
-        "quote" : "First, solve the problem. Then, write the code."
+        "John Johnson" : "First, solve the problem. Then, write the code."
     },
     {
         "Oscar Wilde" : "Experience is the name everyone gives to their mistakes."
@@ -70,14 +69,4 @@ const all_quotes = [
     }
 ]
 
-const btn = document.querySelector('.btn');
-const quote_text = document.querySelector('.quote')
-const author_name = document.querySelector('.author-name')
-let quote_index
-
-btn.addEventListener('click', ()=>{
-    quote_index = Math.floor(Math.random()*16);     // 1
-    // quote_index = 1;
-    author_name.innerText = all_quotes[quote_index]["author"];
-    quote_text.innerText = all_quotes[quote_index]["quote"];
-})
+console.log(Math.floor(Math.random()*16));
