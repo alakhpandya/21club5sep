@@ -51,15 +51,19 @@
     height: 8rem;
     text-align: center;
     padding-top: 3.5rem;
-    margin-left: 44%;
-    margin-top: 19rem;
+    /* margin-left: 44%; */
+    /* margin-top: 19rem; */
+    transform: translate(-50%, -50%);
     position: absolute;
     display: none;
+    
 }
 
 .container .active{
     display: block;
-    animation-name: moveModal;
+    animation-name: move-modal;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .container .chat-container .chat{
@@ -78,4 +82,13 @@
     cursor: pointer;
 } 
 
-@key
+@keyframes move-modal {
+    from{
+        top:0;
+        left:50%;
+    }
+    to{
+        top:50%;
+        left:50%;
+    }
+}
