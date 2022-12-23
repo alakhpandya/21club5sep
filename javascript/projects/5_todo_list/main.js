@@ -18,12 +18,16 @@ add_btn.addEventListener('click', () => {
     input_task.value = "";
 })
 
-let i = 0;
-console.log(check_btn)
-while (i < check_btn.length){
-    console.log('While started...');
-    check_btn[i].addEventListener('click', () => {
-        console.log(check_btn[i]);
-    });
-    i++;
-}
+task_container.addEventListener('click', (e) => {
+    // console.log(e.target);
+    if (e.target.classList.contains('check')){
+            console.log('clicked');
+            e.stopPropagation();
+            console.log(e.target);
+        // e.target.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
+    }
+
+    // if (e.target)
+})
+
+
