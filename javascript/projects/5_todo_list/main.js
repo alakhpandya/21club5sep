@@ -2,6 +2,8 @@ let input_task = document.querySelector('input')
 let add_btn = document.getElementById('add_btn')
 let task_container = document.querySelector('.task-container')
 let new_task
+let check_btn = document.querySelectorAll('.check')
+// let delete_btn = document.querySelector('.trash')
 
 add_btn.addEventListener('click', () => {
     new_task = document.createElement('div')
@@ -15,3 +17,13 @@ add_btn.addEventListener('click', () => {
     task_container.appendChild(new_task);
     input_task.value = "";
 })
+
+let i = 0;
+console.log(check_btn)
+while (i < check_btn.length){
+    console.log('While started...');
+    check_btn[i].addEventListener('click', () => {
+        console.log(check_btn[i]);
+    });
+    i++;
+}
