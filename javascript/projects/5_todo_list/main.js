@@ -19,15 +19,24 @@ add_btn.addEventListener('click', () => {
 })
 
 task_container.addEventListener('click', (e) => {
-    // console.log(e.target);
-    if (e.target.classList.contains('check')){
-            console.log('clicked');
-            e.stopPropagation();
-            console.log(e.target);
-        // e.target.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
+    console.log(e.target);
+    if (e.target.classList.contains('fa-check') || e.target.classList.contains('check')){
+        if (e.target.classList.contains('fa-check')){
+            e.target.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
+        }
+        else{
+            e.target.parentElement.previousElementSibling.style.textDecoration = 'line-through';
+        }
     }
 
-    // if (e.target)
+    if (e.target.classList.contains('fa-trash') || e.target.classList.contains('trash')){
+        if (e.target.classList.contains('fa-trash')){
+            e.target.parentElement.parentElement.parentElement.remove();
+        }
+        else{
+            e.target.parentElement.parentElement.remove();
+        }
+    }
 })
 
 
