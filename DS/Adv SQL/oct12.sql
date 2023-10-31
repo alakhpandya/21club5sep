@@ -1,5 +1,5 @@
 -- create database classwork;
--- use classwork;
+use classwork;
 
 DROP TABLE IF EXISTS student_score;
 
