@@ -1,5 +1,5 @@
 use classwork;
--- drop table Employees;
+-- drop table Employees; 
 Create table If Not Exists Employees (employee_id int, name varchar(30));
 Create table If Not Exists Salaries (employee_id int, salary int);
 Truncate table Employees; 
@@ -10,6 +10,11 @@ Truncate table Salaries;
 insert into Salaries (employee_id, salary) values ('5', '76071'); 
 insert into Salaries (employee_id, salary) values ('1', '22517'); 
 insert into Salaries (employee_id, salary) values ('4', '63539');
+
+select * from Employees;
+select * from Salaries;
+
+-- Print the employees with missing name or salary
 
 with cte1 as (
 	select e.employee_id, e.name, s.salary 
